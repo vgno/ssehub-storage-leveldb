@@ -1,0 +1,39 @@
+{
+  "name": "ssehub-storage-leveldb",
+  "version": "1.0.0",
+  "description": "LevelDB storage adapter for SSE Hub backend",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha",
+    "pretest": "npm run lint",
+    "coverage": "istanbul cover ./node_modules/.bin/_mocha"
+  },
+  "keywords": [
+    "ssehub",
+    "storage",
+    "leveldb"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vgno/ssehub-storage-leveldb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vgno/ssehub-storage-leveldb/issues"
+  },
+  "author": "Espen Hovlandsdal <espen@hovlandsdal.com>",
+  "license": "MIT",
+  "dependencies": {
+    "level": "^1.0.0",
+    "level-sublevel": "^6.4.6"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "eslint": "^0.21.2",
+    "istanbul": "^0.3.14",
+    "lodash.after": "^3.0.1",
+    "mocha": "^2.2.5",
+    "rimraf": "^2.3.4",
+    "vgno-coding-standards": "^1.0.6"
+  }
+}
