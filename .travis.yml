@@ -2,8 +2,10 @@ language: node_js
 node_js:
   - '0.12'
   - '0.10'
-  - iojs
 script:
   - npm run coverage
-
-
+after_script:
+  - 'npm install codeclimate-test-reporter && cat coverage/lcov.info | codeclimate'
+env:
+  global:
+    - secure: F4BaY+LtFcpQcFNnWAux+9qBchxaDPYeLF7IruLFoSKWLByMcAgRC8nUrJrgzktRV4KMYdGy+Tf+kwMUB4zBtzKs/DkJ/TxgfLlXLsy8PVg75bnSkjORySUcpz4r8YykFl52rhJZ8+biTOSrfauBPfYL6zCBOd/RjjGK1tlM5zbd17emn8+ZZqAw9xrVDBxwdK1UJZVmNZI7v1bjh2rGvQNmUcgnLQW+na3kLtfoo2OyjSakJGRd5rPrElM7PI+wV3NdNBnZhxgA7Kdk9CQ7GqLFgD+IGyoh5WLXT5vsja/WWnbPSX/c3gKq5XL9PjvhWr26FqupDVKYN1PSN/XEyWZfSikQdrhgUeumQV4UnMLbSpsJxVlpsXF14y//8wff7I4aQj5RQ4EvGzGVu8WB1+gAJbBN9l0/YrStE2lKuElDsF4KyQSQ+hQDDNI94zMypiE+ICmADM8e4y8zeA5/aumInv1Lqy2ouayaxEqH1M9hPSd+IE8y+FWb/eJg9NbX3B7vQWBnw+vkxqcuL0OZDM48xWEkJpnDwN4OLeLS4nn9EbyKtLQTAkPDmnlX2ErDcOoc1kAFq4+H1wQAZKhEhwLW2n4bHHN+DcPFCeVrxHHjh28hLUYcaMMLSYCuA4lHxG/5CzmR67ofzf+SCYNX3R9usSYNUBjHNUAzB/7kpcs=
